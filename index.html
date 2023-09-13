@@ -14,15 +14,20 @@
         <input type="number" id="cotizacion" class="entradas" placeholder="Cotización del &#128181 ">
         <div id="flete">
             <h3>Costo Flete &#127482&#127480</h3>
+            <label for="peso">Peso del producto</label>
             <input type="number" id="peso" class="entradas" placeholder="Ingrese Kg.">
+            <label for="costoKg">Costo por Kg. (defecto 22.5 USD/Kg)</label>
             <input type="number" id="costoKg" class="entradas" placeholder="Costo por Kg. ">
-            <button class="boton calculos" id="calcularFlete">Calcular</button>
+            <button id="calcularFlete" class="boton calculos" >Calcular</button>
         </div>
         <div id="precio">
             <h3>Precio de venta</h3>
-            <input type="number" class="entradas" placeholder="Costo producto">
-            <input type="number" class="entradas" placeholder="Costo flete">
-            <input type="number" class="entradas" placeholder="Margen %">
+            <label for="costoProducto">Costo del producto</label>
+            <input type="number" id="costoProducto" class="entradas" placeholder="Costo producto">
+            <label for="costoFlete">Costo del flete</label>
+            <input type="number" id="costoFlete" class="entradas" placeholder="Costo flete">
+            <label for="margen">Margen deseado</label>
+            <input type="number" id="margen" class="entradas" placeholder="Margen %" >
         </div>
     </div>
 </body>
