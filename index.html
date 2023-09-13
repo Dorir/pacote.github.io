@@ -8,10 +8,22 @@
         <script src="script.js" defer></script>
     </head>
 <body>
-    <h1>Pacote</h1>
-    <h2>Costo Flete US</h2>
-    <input type="number" id="guess-input">
-    <button class="boton calculos" id="calculoFlete">Calcular</button>
-  
+    <div id="contenedor">
+        <h1>Pacote</h1>
+        <h2>Calculos varios</h2>
+        <input type="number" id="cotizacion" class="entradas" placeholder="Cotización del &#128181 ">
+        <div id="flete">
+            <h3>Costo Flete &#127482&#127480</h3>
+            <input type="number" id="peso" class="entradas" placeholder="Ingrese Kg.">
+            <input type="number" id="costoKg" class="entradas" placeholder="Costo por Kg. ">
+            <button class="boton calculos" id="calcularFlete">Calcular</button>
+        </div>
+        <div id="precio">
+            <h3>Precio de venta</h3>
+            <input type="number" class="entradas" placeholder="Costo producto">
+            <input type="number" class="entradas" placeholder="Costo flete">
+            <input type="number" class="entradas" placeholder="Margen %">
+        </div>
+    </div>
 </body>
 </html>

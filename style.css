@@ -5,26 +5,47 @@
 .color4 {color: #989afa;}
 .color5 {color: #ebe6f6;}
 */
-
-h1 {
-    color: color1;
+#contenedor{
+    width: fit-content;
+    text-align: center; /*alinear o centrar */
+    position: absolute; /*?*/
+    inset: 0;           /*?*/
+    margin: auto;
     font-weight: normal;
+}
+h1 {
+    color: #140f07;
+
     font-size: 40px;
     font-family: Arial;
     text-transform: uppercase;
   }
-  h2 {
-    color: color1;
-    font-weight: normal;
+h2 {
+    color: #140f07;
+    
     font-size: 35px;
     font-family: Arial;
     text-transform: uppercase;
-  }
+}
+h3 {
+    color: #140f07;
+    
+    font-size: 30px;
+    font-family: Arial;
+    text-transform: uppercase;
+}
+  
+
+
+.entradas{
+    text-align: left;
+}
 
 .boton {
+    text-align: center;
     background-color: whitesmoke;
     border: 2px solid #252649;
-    color: color1;
+    color: #252649;
     padding: 5px 10px;
     text-align: center;
     text-decoration: none;
@@ -36,7 +57,7 @@ h1 {
 
   .calculos {
     border-color: #252649;
-    color: color1;
+    color: #140f07;
   }
   
   .calculos:hover {
