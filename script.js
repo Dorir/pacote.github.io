@@ -4,33 +4,35 @@
 const CALFLETE = document.getElementById('calcularFlete');
 const CALPRECIO = document.getElementById('calcularPrecio');
 const FLE = document.getElementById('costoF');
+const PRE = document.getElementById('precioF');
 let DOLAR = Number;
 let costoGs = Number;
+let costoTotal = Number;
+let precioVenta = Number;
 
 //<iframe width="400" height="300" src="http://www.cambioschaco.com.py/widgets/cotizacion/?lang=es" frameborder="0"></iframe>
 
 
 CALFLETE.addEventListener('click', () => {
-    FLE.innerHTML = '';
     //Verificamos si funciona el boton
     console.log('Se hizo click en flete!');
     //Leemos los valores y los asignamos a variables
-    DOLAR = document.getElementById('cotizacion').value
-    const PESO = document.getElementById('peso').value
-    costoPESO = document.getElementById('costoKg').value
-    
-    console.log(costoPESO);
-    console.log(typeof(costoPESO));
+    DOLAR = document.getElementById('cotizacion').valueAsNumber
+    const PESO = document.getElementById('peso').valueAsNumber
+    costoPESO = document.getElementById('costoKg').valueAsNumber
     //verificamos si se ingresó un valor
     if (costoPESO > 0){ 
+    //si el valor es mayor a cero significa que el usuario ingresó un valor distinto al valor por defecto
+    //en caso de que no se haya asignado un valor distinto se pasaría a asignar el valor por defecto
 
     //asignamos valor por defecto    
     } else { 
         costoPESO=22.5;
     }
+    //calculamos el costo en guaraníes
     let costoGs = calcFlete(DOLAR, PESO, costoPESO);
+    //mostramos el costo obtenido
     FLE.innerHTML = 'Costo del flete: ' + costoGs;
-    FLE.style.display = 'block';
 
 })
 // Funcion para calcular el costo del flete
@@ -40,14 +42,22 @@ return costoGs
 }
 
 CALPRECIO.addEventListener('click', () => {
+    //Verificamos si funciona el boton
     console.log('Se hizo click precio!');
-    const costoProd = document.getElementById('costoProducto').value;
-    const costoFLE = document.getElementById('costoFlete').value;
-    const MAR = document.getElementById('margen').value;
-    //validamos que se cargue un dato:
-    
-    console.log(costoProd);
-    console.log(costoFLE);
-    console.log(MAR);
+    //Leemos los valores y los asignamos a variables
+    const costoProd = document.getElementById('costoProducto').valueAsNumber;
+    const costoFLE = document.getElementById('costoFlete').valueAsNumber;
+    const MAR = document.getElementById('margen').valueAsNumber;
+
+    costoTotal=calcPrecio(costoProd, costoFLE, MAR);
+    console.log(costoTotal);
+
+    PRE.innerHTML = 'Precio final de venta: ' + costoTotal;
+
 })
 
+
+function calcPrecio(costoProd, costoFLE, MAR) {
+    costoTotal = (costoProd+costoFLE)*100/MAR;
+return costoTotal
+}
