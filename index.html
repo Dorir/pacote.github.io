@@ -7,28 +7,37 @@
         <link rel="stylesheet" href="style.css">
         <script src="script.js" defer></script>
     </head>
-<body>
-    <div id="contenedor">
-        <h1>Pacote</h1>
-        <h2>Calculos varios</h2>
-        <input type="number" id="cotizacion" class="entradas" placeholder="Cotización del &#128181 ">
-        <div id="flete">
-            <h3>Costo Flete &#127482&#127480</h3>
-            <label for="peso">Peso del producto</label>
-            <input type="number" id="peso" class="entradas" placeholder="Ingrese Kg.">
-            <label for="costoKg">Costo por Kg. (defecto 22.5 USD/Kg)</label>
-            <input type="number" id="costoKg" class="entradas" placeholder="Costo por Kg. ">
-            <button id="calcularFlete" class="boton calculos" >Calcular</button>
+
+    <body>
+        <div id="contenedor">
+            <div id="pacote">
+                <h1>Pacote</h1>
+                <h2>Calculos varios</h2>
+                <label for="cotizacion">Cotización del dolar</label>
+                <input type="number" id="cotizacion" class="entradas" placeholder="Cotización del &#128181 ">
+            </div>
+            <div id="flete">
+                <h3>Costo Flete &#127482&#127480</h3>
+                <label for="peso">Peso del producto</label>
+                <input type="number" id="peso" class="entradas" placeholder="Ingrese Kg.">
+                <label for="costoKg">Costo por Kg.</label>
+                <input type="number" id="costoKg" class="entradas" placeholder="Por defecto 22.5kg ">
+                <button id="calcularFlete" class="boton calculos" type="number" >Calcular</button>
+                <p class="item resultado" id="costoF">Costo del flete:</p>
+            </div>
+            <div id="precio">
+                <h3>Precio de venta</h3>
+                <label for="costoProducto">Costo del producto</label>
+                <input type="number" id="costoProducto" class="entradas" placeholder="Costo producto">
+                <label for="costoFlete">Costo del flete</label>
+                <input type="number" id="costoFlete" class="entradas" placeholder="Costo flete">
+                <label for="margen">Margen deseado</label>
+                <input type="number" id="margen" class="entradas" placeholder="Margen %" >
+                <button id="calcularPrecio" class="boton calculos" >Calcular</button>
+                <p class="item resultado" id="precioF">Percio final</p>
+            </div>
+
         </div>
-        <div id="precio">
-            <h3>Precio de venta</h3>
-            <label for="costoProducto">Costo del producto</label>
-            <input type="number" id="costoProducto" class="entradas" placeholder="Costo producto">
-            <label for="costoFlete">Costo del flete</label>
-            <input type="number" id="costoFlete" class="entradas" placeholder="Costo flete">
-            <label for="margen">Margen deseado</label>
-            <input type="number" id="margen" class="entradas" placeholder="Margen %" >
-        </div>
-    </div>
-</body>
+    </body>
+
 </html>

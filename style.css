@@ -5,17 +5,27 @@
 .color4 {color: #989afa;}
 .color5 {color: #ebe6f6;}
 */
+
+
 #contenedor{
+    border: 3px solid #252649;
     border-radius: 10px;
-    overflow: hidden; 
     width: fit-content;
+    height: fit-content;
     text-align: center; /*alinear o centrar */
     position: absolute; /*?*/
     inset: 0;           /*?*/
     margin: auto;
+    margin-top: 2%;
     font-weight: normal;
     font-family: Arial;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+    
+}
+.contenedor{
+    overflow-y: auto;
+    overflow: hidden;
+
 }
 h1 {
     color: #140f07;
@@ -37,6 +47,7 @@ label,input{
     display: block;
     text-align: left;
     margin: 5px;
+    width: 95%;
 }
 
 .entradas{
@@ -49,7 +60,6 @@ label,input{
     border: 2px solid #252649;
     color: #252649;
     padding: 5px 10px;
-    text-align: center;
     text-decoration: none;
     display: inline-block;
     margin-top: 5px;
@@ -68,40 +78,13 @@ label,input{
     color: white;
   }
 
-/* Loader  */
 
-/* <span class="loader"></span> */
+  .resultado{
 
-  .loader {
-    width: 48px;
-    height: 48px;
-    display: inline-block;
-    position: relative;
-  }
-  .loader::after,
-  .loader::before {
-    content: '';  
-    box-sizing: border-box;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    border: 2px solid #FFF;
-    position: absolute;
-    left: 0;
-    top: 0;
-    animation: animloader 2s linear infinite;
-  }
-  .loader::after {
-    animation-delay: 1s;
-  }
-  
-  @keyframes animloader {
-    0% {
-      transform: scale(0);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 0;
-    }
-  }
+    color: #140f07;
+    
+    font-family: Arial;
+    font-size: 20px;
+
+   
+}
