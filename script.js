@@ -58,6 +58,6 @@ CALPRECIO.addEventListener('click', () => {
 
 
 function calcPrecio(costoProd, costoFLE, MAR) {
-    costoTotal = (costoProd+costoFLE)*100/MAR;
+    costoTotal = Math.round((costoProd+costoFLE)*100/(100-MAR));
 return costoTotal
 }
